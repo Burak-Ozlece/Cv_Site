@@ -15,6 +15,6 @@ namespace MvcCv.Models.entity
     public partial class TblSeltifikalarım
     {
         public int Id { get; set; }
-        public string Aciklama { get; set; }
+        public string Açıklama { get; set; }
     }
 }

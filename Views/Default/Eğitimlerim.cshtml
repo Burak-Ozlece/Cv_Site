@@ -1,13 +1,13 @@
-﻿@model List<MvcCv.Models.entity.TblEğitimlerim>
+﻿@model List<MvcCv.Models.entity.TblEğitim>
 <div class="resume-section-content">
     <h2 class="mb-5">Eğitimlerim</h2>
     @foreach (var eğitimler in Model)
     {
         <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
             <div class="flex-grow-1">
-                <h3 class="mb-0">@eğitimler.Baslik</h3>
-                <div class="subheading mb-3">@eğitimler.AltBaslik</div>
-                <div>@eğitimler.AltBaslik2</div>
+                <h3 class="mb-0">@eğitimler.Başlık</h3>
+                <div class="subheading mb-3">@eğitimler.AltBaşlık</div>
+                <div>@eğitimler.AltBaşlık2</div>
                 <p>GPA: @eğitimler.GNO</p>
             </div>
             <div class="flex-shrink-0"><span class="text-primary">@eğitimler.Tarih</span></div>

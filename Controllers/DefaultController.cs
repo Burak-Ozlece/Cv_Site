@@ -10,25 +10,25 @@ namespace MvcCv.Controllers
     public class DefaultController : Controller
     {
         // GET: Default
-        DbCvEntities1 db = new DbCvEntities1();
+        DbCvEntities2 db = new DbCvEntities2();
         public ActionResult Index()
         {
-            var degerler = db.TblHakkında.ToList();
+            var degerler = db.TblHakkımda.ToList();
             return View(degerler);
         }
         public PartialViewResult Deneyim()
         {
-            var deneyimler = db.TblDeneyimlerim.ToList();
-            return PartialView(deneyimler);
+            var deneyim = db.TblDeneyim.ToList();
+            return PartialView(deneyim);
         }
         public PartialViewResult Eğitimlerim()
         {
-            var eğitimler = db.TblEğitimlerim.ToList();
+            var eğitimler = db.TblEğitim.ToList();
             return PartialView(eğitimler);
         }
         public PartialViewResult Yeteneklerim()
         {
-            var yetenekler = db.TblYeteneklerim.ToList();
+            var yetenekler = db.TblYetenek.ToList();
             return PartialView(yetenekler);
         }
         public PartialViewResult Hobilerim()

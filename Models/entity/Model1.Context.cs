@@ -13,10 +13,10 @@ namespace MvcCv.Models.entity
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DbCvEntities1 : DbContext
+    public partial class DbCvEntities2 : DbContext
     {
-        public DbCvEntities1()
-            : base("name=DbCvEntities1")
+        public DbCvEntities2()
+            : base("name=DbCvEntities2")
         {
         }
     
@@ -26,12 +26,12 @@ namespace MvcCv.Models.entity
         }
     
         public virtual DbSet<TblAdmin> TblAdmin { get; set; }
-        public virtual DbSet<TblDeneyimlerim> TblDeneyimlerim { get; set; }
-        public virtual DbSet<TblEğitimlerim> TblEğitimlerim { get; set; }
-        public virtual DbSet<TblHakkında> TblHakkında { get; set; }
+        public virtual DbSet<TblDeneyim> TblDeneyim { get; set; }
+        public virtual DbSet<TblEğitim> TblEğitim { get; set; }
+        public virtual DbSet<TblHakkımda> TblHakkımda { get; set; }
         public virtual DbSet<TblHobilerim> TblHobilerim { get; set; }
         public virtual DbSet<Tblİletisim> Tblİletisim { get; set; }
         public virtual DbSet<TblSeltifikalarım> TblSeltifikalarım { get; set; }
-        public virtual DbSet<TblYeteneklerim> TblYeteneklerim { get; set; }
+        public virtual DbSet<TblYetenek> TblYetenek { get; set; }
     }
 }

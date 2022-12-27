@@ -1,42 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="DbCvModelStoreContainer" CdmEntityContainer="DbCvEntities1">
+  <EntityContainerMapping StorageEntityContainer="DbCvModelStoreContainer" CdmEntityContainer="DbCvEntities2">
     <EntitySetMapping Name="TblAdmin">
       <EntityTypeMapping TypeName="DbCvModel.TblAdmin">
         <MappingFragment StoreEntitySet="TblAdmin">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
-          <ScalarProperty Name="Parola" ColumnName="Parola" />
+          <ScalarProperty Name="KullanıcıAdı" ColumnName="KullanıcıAdı" />
+          <ScalarProperty Name="Şifre" ColumnName="Şifre" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TblDeneyimlerim">
-      <EntityTypeMapping TypeName="DbCvModel.TblDeneyimlerim">
-        <MappingFragment StoreEntitySet="TblDeneyimlerim">
+    <EntitySetMapping Name="TblDeneyim">
+      <EntityTypeMapping TypeName="DbCvModel.TblDeneyim">
+        <MappingFragment StoreEntitySet="TblDeneyim">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
-          <ScalarProperty Name="AltBaslik" ColumnName="AltBaslik" />
-          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Başlık" ColumnName="Başlık" />
+          <ScalarProperty Name="AltBaşlık" ColumnName="AltBaşlık" />
+          <ScalarProperty Name="Açıklama" ColumnName="Açıklama" />
           <ScalarProperty Name="Tarih" ColumnName="Tarih" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TblEğitimlerim">
-      <EntityTypeMapping TypeName="DbCvModel.TblEğitimlerim">
-        <MappingFragment StoreEntitySet="TblEğitimlerim">
+    <EntitySetMapping Name="TblEğitim">
+      <EntityTypeMapping TypeName="DbCvModel.TblEğitim">
+        <MappingFragment StoreEntitySet="TblEğitim">
+          <ScalarProperty Name="AltBaşlık2" ColumnName="AltBaşlık2" />
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
-          <ScalarProperty Name="AltBaslik" ColumnName="AltBaslik" />
-          <ScalarProperty Name="AltBaslik2" ColumnName="AltBaslik2" />
+          <ScalarProperty Name="Başlık" ColumnName="Başlık" />
+          <ScalarProperty Name="AltBaşlık" ColumnName="AltBaşlık" />
           <ScalarProperty Name="GNO" ColumnName="GNO" />
           <ScalarProperty Name="Tarih" ColumnName="Tarih" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TblHakkında">
-      <EntityTypeMapping TypeName="DbCvModel.TblHakkında">
-        <MappingFragment StoreEntitySet="TblHakkında">
-          <ScalarProperty Name="ID" ColumnName="ID" />
+    <EntitySetMapping Name="TblHakkımda">
+      <EntityTypeMapping TypeName="DbCvModel.TblHakkımda">
+        <MappingFragment StoreEntitySet="TblHakkımda">
+          <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Ad" ColumnName="Ad" />
           <ScalarProperty Name="Soyad" ColumnName="Soyad" />
           <ScalarProperty Name="Adres" ColumnName="Adres" />
@@ -51,8 +51,8 @@
       <EntityTypeMapping TypeName="DbCvModel.TblHobilerim">
         <MappingFragment StoreEntitySet="TblHobilerim">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Aciklama1" ColumnName="Aciklama1" />
-          <ScalarProperty Name="Aciklama2" ColumnName="Aciklama2" />
+          <ScalarProperty Name="Acıklama1" ColumnName="Acıklama1" />
+          <ScalarProperty Name="Açıklama2" ColumnName="Açıklama2" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -72,13 +72,13 @@
       <EntityTypeMapping TypeName="DbCvModel.TblSeltifikalarım">
         <MappingFragment StoreEntitySet="TblSeltifikalarım">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Açıklama" ColumnName="Açıklama" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TblYeteneklerim">
-      <EntityTypeMapping TypeName="DbCvModel.TblYeteneklerim">
-        <MappingFragment StoreEntitySet="TblYeteneklerim">
+    <EntitySetMapping Name="TblYetenek">
+      <EntityTypeMapping TypeName="DbCvModel.TblYetenek">
+        <MappingFragment StoreEntitySet="TblYetenek">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Yetenek" ColumnName="Yetenek" />
         </MappingFragment>
