@@ -15,7 +15,7 @@ namespace MvcCv.Models.entity
     public partial class TblAdmin
     {
         public int Id { get; set; }
-        public string KullanıcıAdı { get; set; }
-        public string Şifre { get; set; }
+        public string KullaniciAdi { get; set; }
+        public string Parola { get; set; }
     }
 }

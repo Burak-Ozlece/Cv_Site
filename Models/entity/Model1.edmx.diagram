@@ -4,15 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="e4afd8b4f2a14e0aa9c86c45bd78d112" Name="Diagram1">
+      <Diagram DiagramId="e038f9a235f34cb9838b5a8b2c00f660" Name="Diagram1">
         <EntityTypeShape EntityType="DbCvModel.TblAdmin" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbCvModel.TblDeneyim" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbCvModel.TblEğitim" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbCvModel.TblHakkımda" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbCvModel.TblDeneyimlerim" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbCvModel.TblEğitimlerim" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbCvModel.TblHakkında" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbCvModel.TblHobilerim" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbCvModel.Tblİletisim" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbCvModel.TblSeltifikalarım" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbCvModel.TblYetenek" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbCvModel.TblYeteneklerim" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

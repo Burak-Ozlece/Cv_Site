@@ -1,0 +1,91 @@
+﻿@model List<MvcCv.Models.entity.TblYeteneklerim>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    var renk = "";
+    var yazirenk = "";
+}
+<div class="wrapper">
+<!-- Content Wrapper. Contains page content -->
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Yetenek Listem</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <a href="" class="btn btn-info">Yeni Yetenek Ekle</a> <br /><br />
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10px">#</th>
+                                        <th>Yetenek</th>
+                                        <th>Derece</th>
+                                        <th style="width: 40px">Oran</th>
+                                        <th>Düzenle / Sil</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        if (item.Oran>=0 && item.Oran<=50)
+                                        {
+                                            renk = "progress-bar bg-danger";
+                                            yazirenk = "bg-danger";
+                                        }
+                                        else if (item.Oran>=51 && item.Oran<=70)
+                                        {
+                                            renk = "progress-bar bg-warning";
+                                            yazirenk = "bg-warning";
+                                        }
+                                        else if (item.Oran>=71 && item.Oran<=84)
+                                        {
+                                            renk = "progress-bar bg-primary";
+                                            yazirenk = "bg-primary";
+                                        }
+                                        else if (item.Oran >= 85 && item.Oran <= 100)
+                                        {
+                                            renk = "progress-bar bg-success";
+                                            yazirenk = "bg-success";
+                                        }
+                                        <tr>
+                                            <td>@item.Id</td>
+                                            <td>@item.Yetenek</td>
+                                            <td>
+                                                <div class="progress progress-xs">
+                                                    <div class="@renk" style="width: @item.Oran%"></div>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge @yazirenk">@item.Oran%</span></td>
+                                            <td>
+                                                <a href="" class="btn btn-warning btn-sm">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                    Düzenle
+                                                </a>
+                                            </td>
+                                            <td>
+                                                
+
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                </div>
+                <!-- /.col -->
+                <div class="col-md-6">
+                </div>
+                <!-- /.col -->
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
