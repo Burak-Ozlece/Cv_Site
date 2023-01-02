@@ -37,6 +37,7 @@ namespace MvcCv.Controllers
             repo.Tdel(t);
             return RedirectToAction("Index");
         }
+        [HttpGet]
         public ActionResult DeneyimGetir(int Id)
         {
             TblDeneyimlerim t = repo.Find(x=>x.Id== Id);

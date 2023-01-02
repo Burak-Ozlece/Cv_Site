@@ -18,7 +18,7 @@
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <a href="" class="btn btn-info">Yeni Yetenek Ekle</a> <br /><br />
+                            <a href="/Yetenek/YeniYetenek" class="btn btn-info">Yeni Yetenek Ekle</a> <br /><br />
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
@@ -26,7 +26,8 @@
                                         <th>Yetenek</th>
                                         <th>Derece</th>
                                         <th style="width: 40px">Oran</th>
-                                        <th>Düzenle / Sil</th>
+                                        <th width="200px">Düzenle</th>
+                                        <th width="200px">Sil</th>
 
                                     </tr>
                                 </thead>
@@ -63,14 +64,16 @@
                                             </td>
                                             <td><span class="badge @yazirenk">@item.Oran%</span></td>
                                             <td>
-                                                <a href="" class="btn btn-warning btn-sm">
+                                                <a href="/Yetenek/YetenekDüzelt/@item.Id" class="btn btn-warning btn-sm">
                                                     <i class="fas fa-pencil-alt"></i>
                                                     Düzenle
                                                 </a>
                                             </td>
                                             <td>
-                                                
-
+                                                <a href="/Yetenek/YetenekSil/@item.Id" class="btn btn-warning btn-sm">
+                                                    <i class="fas fa-trash"></i>
+                                                    Sil
+                                                </a>
                                             </td>
                                         </tr>
                                     }

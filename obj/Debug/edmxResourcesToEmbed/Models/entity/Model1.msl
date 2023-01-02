@@ -79,9 +79,9 @@
     <EntitySetMapping Name="TblYeteneklerim">
       <EntityTypeMapping TypeName="DbCvModel.TblYeteneklerim">
         <MappingFragment StoreEntitySet="TblYeteneklerim">
-          <ScalarProperty Name="Oran" ColumnName="Oran" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Yetenek" ColumnName="Yetenek" />
+          <ScalarProperty Name="Oran" ColumnName="Oran" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

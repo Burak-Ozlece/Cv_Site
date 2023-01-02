@@ -17,5 +17,39 @@ namespace MvcCv.Controllers
             var yetenek = repo.List();
             return View(yetenek);
         }
+        [HttpGet]
+        public ActionResult YeniYetenek()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult YeniYetenek(TblYeteneklerim p)
+        {
+            repo.Tadd(p);
+            return RedirectToAction("Index");
+        }
+        public ActionResult YetenekSil(int id)
+        {
+            var d = repo.Find(x=>x.Id == id);
+            repo.Tdel(d);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult YetenekDüzelt(int id)
+        {
+            var t = repo.Find(x => x.Id == id);
+            return View(t);
+        }
+
+        [HttpPost]
+        public ActionResult YetenekDüzelt(TblYeteneklerim t)
+        {
+            TblYeteneklerim tblYeteneklerim = repo.Find(x=>x.Id == t.Id);
+            tblYeteneklerim.Yetenek = t.Yetenek;
+            tblYeteneklerim.Oran = t.Oran;
+            repo.TUpdate(tblYeteneklerim);
+            return RedirectToAction("Index");
+        }
     }
 }
