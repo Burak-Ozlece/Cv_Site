@@ -1,0 +1,20 @@
+﻿@model MvcCv.Models.entity.TblSeltifikalarım
+@{
+    ViewBag.Title = "SeltifikaGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Seltifika Düzenle Sayfası</h4>
+<br />
+<form method="post" class="form-group">
+    @Html.Label("Seltifika Id")
+    @Html.TextBoxFor(x => x.Id, new { @class = "form-control" })
+    @Html.Label("Açıklama")
+    @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+    <a href="/Seltifika/SeltifikaSil/@Model.Id" class="btn btn-danger">Sil</a>
+</form>

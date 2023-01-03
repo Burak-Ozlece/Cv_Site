@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DbCvModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DbCvModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="TblAdmin">
           <Key>
             <PropertyRef Name="Id" />
@@ -71,6 +71,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tarih" Type="varchar" MaxLength="30" />
           <Property Name="Aciklama" Type="varchar" MaxLength="250" />
         </EntityType>
         <EntityType Name="TblYeteneklerim">
@@ -91,8 +92,7 @@
           <EntitySet Name="TblSeltifikalarım" EntityType="Self.TblSeltifikalarım" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblYeteneklerim" EntityType="Self.TblYeteneklerim" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DbCvModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -163,6 +163,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Aciklama" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Tarih" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="TblYeteneklerim">
           <Key>
@@ -258,6 +259,7 @@
           <EntitySetMapping Name="TblSeltifikalarım">
             <EntityTypeMapping TypeName="DbCvModel.TblSeltifikalarım">
               <MappingFragment StoreEntitySet="TblSeltifikalarım">
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
               </MappingFragment>

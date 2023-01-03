@@ -1,0 +1,17 @@
+﻿@model MvcCv.Models.entity.TblSeltifikalarım
+@{
+    ViewBag.Title = "YeniSeltifika";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Yeni Seltifika Ekleme Sayfası</h4>
+<br />
+<form method="post" class="form-group">
+    @Html.Label("Açıklama")
+    @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Ekle</button>
+</form>
