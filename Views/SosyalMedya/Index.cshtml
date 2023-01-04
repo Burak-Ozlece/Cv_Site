@@ -1,0 +1,81 @@
+﻿@model List<MvcCv.Models.entity.TblSosyalMedya>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="wrapper">
+    <!-- Content Wrapper. Contains page content -->
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Sosyal Medya Listem</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#Modal1">Yeni Sosyal Medya Ekle</button> <br /><br />
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10px">#</th>
+                                        <th style="width:50%">Sosyal Medya</th>
+                                        <th>Durum</th>
+                                        <th width="25%">Düzenle</th>
+                                        <th width="25%">Sil</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.Id</td>
+                                            <td>@item.Ad</td>
+                                            <td>@item.Durum</td>
+                                            <td>
+                                                <a href="/SosyalMedya/SosyalMedyaDüzenle/@item.Id" class="btn btn-warning btn-sm">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                    Düzenle
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="/SosyalMedya/SosyalMedyaSil/@item.Id" class="btn btn-danger btn-sm">
+                                                    <i class="fas fa-trash"></i>
+                                                    Sil
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">Yeni Sosyal Hesabı Ekleme</div>
+            <form method="post" action="/SosyalMedya/Ekle">
+                <div class="modal-body">
+                    <label>Sosyal Medya İsmi</label>
+                    <input name="Ad" class="form-control" /> <br />
+                    <label>Sosyal Medya Link</label>
+                    <input name="Link" class="form-control" /> <br />
+                    <label>Sosyal Medya İkon</label>
+                    <input name="Ikon" class="form-control" /> <br />
+                    <button type="submit" class="btn btn-info">Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

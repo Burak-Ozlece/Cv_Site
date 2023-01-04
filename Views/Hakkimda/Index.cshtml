@@ -1,25 +1,30 @@
-﻿
+﻿@model List<MvcCv.Models.entity.TblHakkında>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Hakkımda Menüsü</h2>
-
-<table class="table table-bordered">
-    <tr>
-        <th>Id</th>
-        <th>Ad</th>
-        <th>Şehir</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>Murat</td>
-        <td>Elazığ</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Burak</td>
-        <td>Kayseri</td>
-    </tr>
-</table>
+<br />
+<h2>Hakkımda Düzenleme Sayfası</h2>
+<br />
+<form method="post">
+    @foreach (var item in Model)
+    {
+        <label>Ad</label>
+        <input value="@item.Ad" name="Ad" class="form-control" />
+        <label>Soyad</label>
+        <input value="@item.Soyad" name="Soyad" class="form-control" />
+        <label>Adres</label>
+        <input value="@item.Adres" name="Adres" class="form-control" />
+        <label>Eposta</label>
+        <input value="@item.Eposta" name="Eposta" class="form-control" />
+        <label>Telefon</label>
+        <input value="@item.Telefon" name="Telefon" class="form-control" />
+        <label>Resim</label>
+        <input value="@item.Resim" name="Resim" class="form-control" />
+        <label>Açıklama</label>
+        <textarea rows="4" name="Acıklama" class="form-control">@item.Acıklama</textarea>
+    }
+    <br />
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+</form>
